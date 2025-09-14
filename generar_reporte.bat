@@ -1,25 +1,20 @@
 @echo off
 chcp 65001 >nul
 echo =================================
-echo    ABRIENDO REPORTE ACTUAL
+echo    REPORTE DE TIEMPO LOL
 echo =================================
 echo.
-echo Ubicacion: %CD%
-echo.
 
-if exist "%CD%\reporte_lol.txt" (
-    echo 📊 REPORTE ACTUAL:
-    echo ======================
-    type "%CD%\reporte_lol.txt"
+if exist "reporte_lol.txt" (
+    type "reporte_lol.txt"
     echo.
-    echo ¿Quieres abrir el archivo completo? (S/N)
-    set /p respuesta=
-    if /i "%respuesta%"=="S" (
-        notepad "%CD%\reporte_lol.txt"
+    set /p respuesta="¿Abrir reporte completo? (s/n): "
+    if /i "%respuesta%"=="s" (
+        notepad "reporte_lol.txt"
     )
 ) else (
-    echo ❌ No hay reporte disponible todavía
-    echo Juega League of Legends para generar datos
+    echo No hay reporte disponible todavia
+    echo Juega League of Legends primero
 )
 
 echo.
