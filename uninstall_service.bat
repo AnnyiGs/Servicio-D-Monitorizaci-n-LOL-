@@ -1,15 +1,15 @@
 @echo off
-chcp 65001 >nul
 echo ==========================================
 echo    DESINSTALADOR SERVICIO MONITOR LOL
 echo ==========================================
 echo.
-echo Ubicacion actual: %CD%
-echo.
 
-:: Verificar permisos de administrador
+:: Cambiar a la carpeta donde está este archivo
+cd /d "%~dp0"
+
+:: Verificar si es administrador
 net session >nul 2>&1
-if %errorLevel% neq 0 (
+if not %errorLevel% == 0 (
     echo ERROR: Debes ejecutar como Administrador
     echo Haz clic derecho -> "Ejecutar como administrador"
     pause
@@ -17,12 +17,12 @@ if %errorLevel% neq 0 (
 )
 
 echo Deteniendo servicio...
-python "%CD%\lol_monitor.py" stop
+python lol_monitor.py stop
 
 echo Desinstalando servicio...
-python "%CD%\lol_monitor.py" remove
+python lol_monitor.py remove
 
 echo.
-echo ✅ SERVICIO DESINSTALADO CORRECTAMENTE
+echo SERVICIO DESINSTALADO CORRECTAMENTE
 echo.
 pause
