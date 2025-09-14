@@ -1,10 +1,8 @@
 @echo off
 chcp 65001 >nul
 echo ========================================
-echo    INSTALADOR SERVICIO MONITOR LOL
+echo    INSTALADOR CORREGIDO - MONITOR LOL
 echo ========================================
-echo.
-echo Ubicacion actual: %CD%
 echo.
 
 :: Verificar permisos de administrador
@@ -16,22 +14,27 @@ if %errorLevel% neq 0 (
     exit /b 1
 )
 
-echo Instalando dependencias necesarias...
+echo [1/5] Verificando Python...
+python --version
+
+echo [2/5] Instalando dependencias...
 pip install pywin32 psutil
 
-echo Instalando servicio...
-python "%CD%\lol_monitor.py" install
+echo [3/5] Registrando servicio...
+cd /d "%~dp0"
+python "%~dp0lol_monitor.py" install
 
-echo Iniciando servicio...
-python "%CD%\lol_monitor.py" start
+echo [4/5] Iniciando servicio...
+python "%~dp0lol_monitor.py" start
+
+echo [5/5] Verificando instalacion...
+timeout /t 3 /nobreak >nul
+sc query LolTimeTracker | findstr "STATE"
 
 echo.
-echo ✅ SERVICIO INSTALADO CORRECTAMENTE
+echo ✅ INSTALACION COMPLETADA
 echo.
-echo 📍 Ubicacion: %CD%
-echo 📍 Reporte: %CD%\reporte_lol.txt
-echo.
-echo El servicio funciona desde esta ubicacion
-echo No muevas los archivos después de instalar
+echo Servicio: League of Legends Time Tracker
+echo Estado: Debe aparecer como RUNNING
 echo.
 pause
