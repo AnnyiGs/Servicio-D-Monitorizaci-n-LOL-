@@ -30,6 +30,7 @@ LolTimeTracker/
 ├── lol_time_data.json      # Datos técnicos (auto-generado)
 └── reporte_lol.txt         # Reporte usuario (auto-generado)
 ```
+![Ejemplo visual de archivos generados](evidencias/archivos_generados.png)
 
 ### 📊 Descripción Detallada de Archivos
 | Archivo                | Tipo         | Descripción                                      |
