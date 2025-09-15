@@ -199,3 +199,18 @@ El servicio se inicia automáticamente con Windows y requiere cero intervención
 - **Tipo de inicio:** Automático
 - **Dependencias:** Python 3.8+, pywin32, psutil
 - **Archivo de configuración:** lol_time_data.json
+
+
+---
+
+<div align="center">
+	<b>✨ OCHOA ORTEGA ANDREA J.</b><br>
+	<br>
+	<sub>Computación Tolerante a Fallas D06.</sub><br>
+	<br>
+	<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+	<img src="https://img.shields.io/badge/Batchfile-4D4D4D?style=for-the-badge&logo=windows&logoColor=white" alt="Batchfile"/>
+	<br>
+	<i>“Lo que esta bien hecho no se va a romper.”</i>
+</div>
+
