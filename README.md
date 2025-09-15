@@ -146,6 +146,8 @@ El servicio se inicia automáticamente con Windows y requiere cero intervención
 3. Esperar que complete los 3 pasos de desinstalación
 4. Opcional: Eliminar la carpeta manualmente
 
+![Captura de desinstalación](evidencias/desinstalacion.png)
+
 ---
 
 ## ❌ Solución de Problemas Comunes
