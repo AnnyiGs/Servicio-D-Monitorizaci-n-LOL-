@@ -84,7 +84,7 @@ LolTimeTracker/
 3. Buscar: "League of Legends Time Tracker"
 4. Verificar que el estado sea "En ejecución"
 
-![Servicio en ejecución](evidencias/ejecucion.mp4)
+![Servicio en ejecución](evidencias/EnEjecucion.png)
 
 ---
 
